@@ -1,7 +1,10 @@
+import { route } from 'preact-router';
+
+
 export default function New() {
 
   const submitHandler = () => {
-    debugger;
+    route('/match');
   }
 
   return (

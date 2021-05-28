@@ -1,5 +1,6 @@
 import Router, { Link } from 'preact-router';
 import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
 import About from './pages/about';
 import Home from './pages/home';
 import Match from './pages/match/match';
@@ -12,11 +13,12 @@ export function App() {
       <Navbar />
       <Router>
         <Home path="/" />
-        <About path="/about" />
         <New path="/new" />
         <Match path="/match" />
         <Result path="/result" />
+        <About path="/about" />
       </Router>
+      <Footer />
     </>
   )
 }
