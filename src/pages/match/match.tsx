@@ -1,8 +1,9 @@
 import { Match } from "../../models/match";
 import { Mortgage } from "../../models/mortgage";
 import { Player } from "../../models/player";
-import PlayerPanel from "./components/player";
-
+import PlayerPanel from "./components/playerPanel";
+import MortgagePanel from './components/mortgagePanel';
+import ActionPanel from './components/actionPanel';
 
 export default function Match() {
   const _match: Match = {
@@ -109,7 +110,10 @@ export default function Match() {
   return (
     <>
       <h1>Match</h1>
-      <PlayerPanel player={_match.players[_match.activePlayerIndex]}></PlayerPanel>
+      <pre>{JSON.stringify(_match)}</pre>
+      <PlayerPanel player={_match.players[0]}></PlayerPanel>
+      <ActionPanel></ActionPanel>
+      <MortgagePanel mortgageList={_match.availableMortgages}></MortgagePanel>
     </>
-  )
+  );
 }
