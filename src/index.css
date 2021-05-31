@@ -31,3 +31,24 @@ html, body {
 a {
 	color:#fdd;
 }
+
+section {
+	background: #fff2;
+	padding: 1em;
+	margin: 1em;
+}
+
+section.action {
+	margin: 0 auto;
+	background: #0002;
+	display: flex;
+	flex-flow: column;
+	max-width: 300px;
+}
+
+section.action > a {
+	padding: 1em;
+	margin: 1em;
+	text-decoration: none;
+	background: #fff2;
+}
