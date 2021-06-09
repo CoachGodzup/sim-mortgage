@@ -1,23 +1,33 @@
 import { route } from 'preact-router';
 
-
 export default function New() {
 
   const submitHandler = () => {
-    route('/match');
+    route('/player');
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <div className="form-group">
-        <select>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-        </select>
-      </div>
-      <button type="submit">Start</button>
-    </form>
+    <section class="action">
+      <form onSubmit={submitHandler}>
+        <div className="input-group">
+          <label for="playerNumber">Number of players</label>
+          <div className="form-group">
+            <label>
+              <input type="radio" name="playerNumber" value="1"/>1
+            </label>
+            <label>
+              <input type="radio" name="playerNumber" value="2"/>2
+            </label>
+            <label>
+              <input type="radio" name="playerNumber" value="3"/>3
+            </label>
+            <label>
+              <input type="radio" name="playerNumber" value="4"/>4
+            </label>
+          </div>
+        </div>
+        <button type="submit">Start</button>
+      </form>
+    </section>
   )
 }

@@ -7,7 +7,7 @@ export interface MortgagePanelProps {
 
 export default function MortgagePanel(props: MortgagePanelProps) {
   return (
-    <div>
+    <section>
     { (props.mortgageList || []).map((mg: Mortgage) => <div>
       <pre>
         {JSON.stringify(mg)}
@@ -15,6 +15,6 @@ export default function MortgagePanel(props: MortgagePanelProps) {
       <button>CHANGE MORTGAGE</button>
     </div>)
     }
-    </div>
+    </section>
   );
 }
