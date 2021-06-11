@@ -47,12 +47,14 @@ export default function Match() {
       }
     }],
     players: [{
+      id: 'abc',
       name: 'Brambilla Fumagalli',
       budget: 50000,
       earning: 1500,
       expenses: 800,
       type: 'Human'
     }, {
+      id: 'def',
       name: 'Agenore Brumai',
       budget: 50000,
       earning: 1500,
@@ -63,6 +65,7 @@ export default function Match() {
 
   const mockPlayer = (): Player => {
     return {
+      id:'bot',
       name: 'Bernie The Robot',
       budget: 50000,
       earning: 1500,

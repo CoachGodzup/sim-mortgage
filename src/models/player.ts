@@ -4,6 +4,7 @@ import Mortgage from "./mortgage";
 export type PlayerType = 'Human' | 'AI';
 
 export default interface Player {
+  id: string;
   name: string;
   type: PlayerType;
   budget: number;

@@ -1,6 +1,5 @@
 import { Link } from "preact-router";
 
-
 export default function Home() {
   return (
     <main>
@@ -10,7 +9,7 @@ export default function Home() {
           <p>Be the smartest house-owner among your friends!</p>
         </article>
       </div>
-      <section class="action">
+      <section className="action">
         <Link href="/new">New game</Link>
         <Link href="/match">Join match</Link>
       </section>
