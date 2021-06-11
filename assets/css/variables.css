@@ -1,0 +1,30 @@
+:root {
+  --black: #020024;
+
+  --color1: #FD0DD1;
+  --color2: #C30BE3;
+  --color3: #9600FA;
+  --color4: #673ab8;
+  --color5: #250DFD;
+  --text-color: #fdd;/*#FAFAFA;*/
+
+  --lighten-color-mask: #fff2;
+  --darken-color-mask: #0002;
+
+  --color-primary: var(--color4);
+  --color-primary-light: var(--color3);
+  --color-secondary: var(--color2);
+  --color-secondary-light: var(--color1);
+  --color-tertiary: var(--color5);
+
+  --background-color: var(--color-primary);
+  --link-color: var(--text-color);
+  --section-color: var(--lighten-color-mask);
+
+  --font-family-standard: 'Helvetica Neue', arial, sans-serif;
+  --font-size: 16px;
+  --padding-std: 1em;
+  --margin-std: 1em;
+  --button-color: var(--lighten-color-mask);
+  --button-hover-color: var(--color-secondary-light);
+}

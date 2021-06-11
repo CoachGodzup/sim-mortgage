@@ -5,16 +5,8 @@ nav.mainNavbar {
 nav.mainNavbar > * {
   padding: 0.5em 1em;
   margin: 0.1em;
-  background: #fff2;
+  /* background: #fff2;
   text-decoration: none;
   opacity: 0.8;
-}
-
-nav.mainNavbar > *:hover,
-nav.mainNavbar > *:focus {
-  opacity: 1;
-}
-
-nav.mainNavbar >*:focus {
-  border: 1px solid #fff; 
+  border-radius: 0.5em; */
 }

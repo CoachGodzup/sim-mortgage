@@ -1,4 +1,4 @@
-import Router, { Link } from 'preact-router';
+import Router from 'preact-router';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 import About from './pages/about';
