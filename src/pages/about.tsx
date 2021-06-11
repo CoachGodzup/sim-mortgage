@@ -1,4 +1,6 @@
-export default function About() {
+import { PageParams } from "../models/page";
+
+export default function About(_: PageParams) {
   return (
     <section>
       <article>

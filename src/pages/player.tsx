@@ -1,6 +1,7 @@
 import { route } from "preact-router";
+import { PageParams } from "../models/page";
 
-export default function Player() {
+export default function Player(_: PageParams) {
 
   const submitHandler = (event: Event) => {
     event.preventDefault();

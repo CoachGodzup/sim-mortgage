@@ -1,6 +1,7 @@
 import { route } from 'preact-router';
+import { PageParams } from '../models/page';
 
-export default function New() {
+export default function New(_: PageParams) {
 
   const submitHandler = () => {
     route('/player');

@@ -1,6 +1,7 @@
 import { Link } from "preact-router";
+import { PageParams } from "../models/page";
 
-export default function Home() {
+export default function Home(_: PageParams) {
   return (
     <main>
       <div className="jumbo">

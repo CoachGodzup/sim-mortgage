@@ -4,10 +4,11 @@ import Player from "../../models/player";
 import PlayerPanel from "./components/playerPanel";
 import MortgagePanel from './components/mortgagePanel';
 import ActionPanel from './components/actionPanel';
+import { PageParams } from "../../models/page";
 
 import './match.css';
 
-export default function Match() {
+export default function Match(_: PageParams) {
   const _match: Match = {
     id: 'MOCK_MATCH',
     activePlayerIndex: 0,
