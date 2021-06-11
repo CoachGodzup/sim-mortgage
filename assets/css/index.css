@@ -1,0 +1,87 @@
+
+@import url(variables.css);
+
+:root {
+	font-family: var(--font-family-standard);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 400;
+	font-size: var(--font-size);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	min-height: 100%;
+	padding: 0;
+	margin: 0;
+	background: #FAFAFA;
+	color: #444;
+}
+
+#app {
+	height: 100%;
+  min-height: 100vh;
+  text-align: center;
+  /* background-color: var(--background-color); */
+  color: var(--text-color);
+  font-size: 1.5em;
+
+	background:	var(--background-color);
+	background: linear-gradient(15deg, var(--black) 0%, var(--color-primary) 35%, var(--color-primary-light) 100%);
+}
+
+.link {
+  color: var(--text-color);
+}
+
+a, button {
+	border-radius: 0.5em;
+	background: var(--button-color);
+	color: var(--text-color);
+	text-decoration: none;
+	transition: 0.5s ease-in-out;
+	cursor: pointer;
+	margin: 0 1em;
+}
+
+button {
+	padding: var(--padding-std);
+	border: none;
+	font-size: var(--font-size);
+}
+
+a:hover,
+button:hover,
+a:focus,
+button:focus {
+	background: var(--button-hover-color);
+}
+
+/*
+a:focus,
+button:focus {
+	border: 2px solid var(--text-color);
+} */
+
+section {
+	background: var(--section-color);
+	padding: var(--padding-std);
+	margin: var(--margin-std);;
+}
+
+section.action {
+	margin: 0 auto;
+	background: var(--lighten-color-mask);
+	display: flex;
+	flex-flow: column;
+	max-width: 300px;
+}
+
+section.action > a {
+	padding: 1em;
+	margin: 1em;
+}

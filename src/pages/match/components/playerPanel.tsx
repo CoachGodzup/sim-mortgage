@@ -1,4 +1,4 @@
-import { Player } from "../../../models/player";
+import Player from "../../../models/player";
 
 export interface PlayerPanelProps {
   player: Player
@@ -6,7 +6,6 @@ export interface PlayerPanelProps {
 
 export default function PlayerPanel(props: PlayerPanelProps) {
   const avatarUrlGenerator = () => {
-    debugger;
     return `https://eu.ui-avatars.com/api/?name=${props.player.name.replace(/s/, '+')}`;
   };
 
