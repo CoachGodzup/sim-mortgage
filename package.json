@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A simple game about mortgages",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview"
