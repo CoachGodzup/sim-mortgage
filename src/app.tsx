@@ -5,7 +5,7 @@ import About from './pages/about';
 import Home from './pages/home';
 import Match from './pages/match/match';
 import New from './pages/new';
-import Result from './pages/result';
+import Result from './pages/result/result';
 
 export function App() {
   return (

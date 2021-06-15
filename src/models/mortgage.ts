@@ -17,8 +17,10 @@ export interface MortgageVariableRate extends MortgageRate {
 }
 
 export default interface Mortgage {
-  name: string;
+  id: number;
+  turn: number;
   bank: Bank;
+  name: string;
   housePercentage: number;
   durationTurns: number;
   rate: MortgageFixRate | MortgageVariableRate;
