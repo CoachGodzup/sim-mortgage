@@ -11,6 +11,11 @@ html, body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+h1, h2, h3, h4 {
+	font-family: var(--font-family-title);
+	font-weight: 700;
+}
+
 * {
 	box-sizing: border-box;
 }
