@@ -6,18 +6,22 @@ import Home from './pages/home';
 import Match from './pages/match/match';
 import New from './pages/new';
 import Result from './pages/result/result';
+import {Provider} from 'react-redux';
+import store from './store/store';
 
 export function App() {
   return (
     <>
       <Navbar />
-      <Router>
-        <Home path="/" />
-        <New path="/new" />
-        <Match path="/match" />
-        <Result path="/result" />
-        <About path="/about" />
-      </Router>
+      <Provider store={store}>
+        <Router>
+          <Home path="/" />
+          <New path="/new" />
+          <Match path="/match" />
+          <Result path="/result" />
+          <About path="/about" />
+        </Router>
+      </Provider>
       <Footer />
     </>
   )

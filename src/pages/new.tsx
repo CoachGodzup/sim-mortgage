@@ -1,7 +1,12 @@
 import { route } from 'preact-router';
+import { useDispatch, useSelector } from 'react-redux';
 import { PageParams } from '../models/page';
+import { addPlayer } from '../store/playerSlice';
 
 export default function New(_: PageParams) {
+
+  const playerStore = useSelector((state) => state.player);
+  const dispatch = useDispatch();
 
   const submitHandler = () => {
     route('/player');
@@ -27,6 +32,13 @@ export default function New(_: PageParams) {
             </label>
           </div>
         </div>
+
+        <form onSubmit={() => dispatch(addPlayer(_, {nickname: 'ginopino'}))}>
+          <input placeholder="nickname"></input>
+          <button type="submit">Add player</button>
+        </form>
+
+
         <button type="submit">Start</button>
       </form>
     </section>
