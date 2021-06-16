@@ -4,3 +4,13 @@ footer.footer {
   width: 100vw;
   background: #0002;
 }
+
+footer.footer a {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer.footer a:hover {
+  text-decoration: underline;
+}

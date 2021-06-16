@@ -1,12 +1,16 @@
-export default function Ranking() {
+import { PlayerRank } from "./result";
+
+export interface RankingProps {
+  players: PlayerRank[]
+}
+export default function Ranking(props: RankingProps) {
   return <div>
     <h2>Ranking (after 30 turns)</h2>
     <ol>
-      <li>Hin Xiaomi - 15000 pts</li>
-      <li>Thomas Santoku - 14253 pts</li>
-      <li>Gino Pilotino - 12321 pts</li>
-      <li>Marcus Embed - 10223 pts</li>
-      <li>Robert Capa - 9432 pts</li>
+      {props.players.map(player => <li>{player.name} - {player.score} pts</li>)}
     </ol>
+    <pre>
+      {JSON.stringify(props)}
+    </pre>
   </div>
 }
