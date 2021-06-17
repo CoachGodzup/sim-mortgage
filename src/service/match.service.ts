@@ -1,5 +1,9 @@
 import Mortgage, { Bank } from "../models/mortgage";
-
+import {
+  generateRandomFloat,
+  generateRandomInteger,
+  getRandom,
+} from "./utils.service";
 class MatchService {
   private availableBanks: Bank[] = [
     "Concordia",
@@ -24,7 +28,7 @@ class MatchService {
   createNewMatch = () => {};
 
   getMortgages = () => {
-    const numberOfMortgages = this.generateRandomInteger(2, 7);
+    const numberOfMortgages = generateRandomInteger(2, 7);
     const output = [...Array(numberOfMortgages).keys()].map((_) =>
       this.generateMortgage()
     );
@@ -33,29 +37,17 @@ class MatchService {
 
   private generateMortgage = (): Mortgage => {
     return {
-      id: this.generateRandomInteger(1, 9999),
-      bank: this.getRandom(this.availableBanks),
-      name: this.getRandom(this.availableNames),
-      durationTurns: this.generateRandomInteger(15, 30, 10),
+      id: generateRandomInteger(1, 9999),
+      bank: getRandom(this.availableBanks),
+      name: getRandom(this.availableNames),
+      durationTurns: generateRandomInteger(15, 30, 10),
       turn: 0,
-      housePercentage: this.getRandom(this.availableHousePercentage),
+      housePercentage: getRandom(this.availableHousePercentage),
       rate: {
         type: "FIX",
-        value: +this.generateRandomFloat(0, 10).toFixed(2),
+        value: +generateRandomFloat(0, 10).toFixed(2),
       },
     };
-  };
-
-  private getRandom = <T>(haystack: T[]): T => {
-    return haystack[this.generateRandomInteger(0, haystack.length - 1)];
-  };
-
-  generateRandomFloat = (min: number, max: number) => {
-    return Math.random() * (max - min) + min;
-  };
-
-  generateRandomInteger = (min: number, max: number, step: number = 1) => {
-    return Math.round(this.generateRandomFloat(min / step, max / step)) * step;
   };
 }
 const matchService = new MatchService();
