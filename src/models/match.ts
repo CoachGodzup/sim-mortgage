@@ -4,7 +4,7 @@ import Player from "./player";
 
 export default interface Match {
   id: string;
-  actualTurn: number;
+  turn: number;
   maxTurn: number;
   players: Player[];
   activePlayerIndex: number;

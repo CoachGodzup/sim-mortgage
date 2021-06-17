@@ -4,10 +4,17 @@
   justify-content: center;
 }
 
+.matchContainer > * > section {
+  margin: 1em;
+}
+
 .actionContainer {
   display: sticky;
 }
 
 .mortgageContainer {
   width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
 }
