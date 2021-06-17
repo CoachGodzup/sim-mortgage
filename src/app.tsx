@@ -4,7 +4,7 @@ import Footer from './components/footer/footer';
 import About from './pages/about';
 import Home from './pages/home';
 import Match from './pages/match/match';
-import New from './pages/new';
+import Player from './pages/player';
 import Result from './pages/result/result';
 
 export function App() {
@@ -13,7 +13,7 @@ export function App() {
       <Navbar />
       <Router>
         <Home path="/" />
-        <New path="/new" />
+        <Player path="/new" />
         <Match path="/match" />
         <Result path="/result" />
         <About path="/about" />
