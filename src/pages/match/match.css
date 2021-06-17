@@ -4,6 +4,10 @@
   justify-content: center;
 }
 
+.matchContainer > * > section {
+  margin: 1em;
+}
+
 .actionContainer {
   display: sticky;
 }
