@@ -7,7 +7,7 @@ import Match from "./pages/match/match";
 import Player from "./pages/player";
 import Result from "./pages/result/result";
 import { Provider } from "react-redux";
-import store from "./store/store";
+import { store } from "./store/store";
 
 export function App() {
   return (

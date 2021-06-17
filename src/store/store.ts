@@ -1,8 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import playerReducer from './playerSlice';
+import playerReducer from "./playerSlice";
 
-export default configureStore({
+export const store = configureStore({
   reducer: {
-    player: playerReducer
-  }
-})
+    player: playerReducer,
+  },
+});
+
+export type RootState = ReturnType<typeof store.getState>;
+
+export type AppDispatch = typeof store.dispatch;

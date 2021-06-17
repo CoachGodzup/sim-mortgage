@@ -1,18 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import Player from "../models/player";
 
 export const playerSlice = createSlice({
-  name: 'player',
-  initialState: [],
+  name: "player",
+  initialState: [] as Player[],
   reducers: {
-    addPlayer: (state, action) => {
-      // TODO
+    createPlayer: (state, action: PayloadAction<Player>) => {
+      return [...state, action.payload];
     },
-    updatePlayer: (state, action) => {
-      // TODO
-    } 
-  }
-})
+    updatePlayer: (state, action: PayloadAction<Player>) => {
+      return state.map((elm) =>
+        elm.id === action.payload.id ? action.payload : elm
+      );
+    },
+    removePlayer: (state, action: PayloadAction<{ id: string }>) => {
+      return state.filter((elm) => elm.id !== action.payload.id);
+    },
+  },
+});
 
-export const {addPlayer, updatePlayer} = playerSlice.actions
+export const { createPlayer, updatePlayer, removePlayer } = playerSlice.actions;
 
-export default playerSlice.reducer
+export default playerSlice.reducer;
