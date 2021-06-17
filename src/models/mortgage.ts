@@ -1,6 +1,5 @@
 export type Bank = 'Banco dei Pascoli Verdi' |
-'Concordia' | 'San Paganino' | 'Cassa Dritta' | 'Finbrunetta'
-
+'Concordia' | 'San Paganino' | 'Cassa Dritta' | 'Findos' | 'IndiceBanca' | 'CariCividale'
 export interface MortgageRate {
   type: 'FIX' | 'VARIABLE'
 }
