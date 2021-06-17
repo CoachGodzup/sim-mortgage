@@ -1,5 +1,4 @@
 import { PlayerRank } from "./result";
-
 export interface RankingProps {
   players: PlayerRank[]
 }

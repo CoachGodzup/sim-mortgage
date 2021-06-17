@@ -20,6 +20,8 @@ export default function Match(_: PageParams) {
     euriborRate: 0.5,
     startingBudget: 50000,
     availableMortgages: [{
+      id: 1,
+      turn: 1,
       name: 'Strozz 1000 Plus',
       bank: 'Concordia',
       durationTurns: 30,
@@ -29,6 +31,8 @@ export default function Match(_: PageParams) {
         value: 0.2
       }
     }, {
+      id: 2,
+      turn: 1,
       name: 'Make 100 Green of you',
       bank: 'San Paganino',
       durationTurns: 20,
@@ -38,6 +42,8 @@ export default function Match(_: PageParams) {
         value: 1
       }
     }, {
+      id: 3,
+      turn: 1,
       name: 'Money Burner 9000',
       bank: 'Banco dei Pascoli Verdi',
       durationTurns: 20,
@@ -75,6 +81,7 @@ export default function Match(_: PageParams) {
     }
   }
 
+  /*
   const mockMortgage = (): Mortgage => {
     return {
       name: 'Strozz 1000 Plus',
@@ -87,6 +94,7 @@ export default function Match(_: PageParams) {
       }
     }
   }
+  */
 
   const computeExpenses = () => {}
   const changeEuribor = () => {}
@@ -114,7 +122,7 @@ export default function Match(_: PageParams) {
   }
 
   return (
-    <>
+    <main>
       <h1>Match</h1>
       <div className="matchContainer">
         <div className="actionContainer">
@@ -125,6 +133,6 @@ export default function Match(_: PageParams) {
           <MortgagePanel mortgageList={_match.availableMortgages}></MortgagePanel>
         </div>
       </div>
-    </>
+    </main>
   );
 }

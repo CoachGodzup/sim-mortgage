@@ -40,9 +40,9 @@ export default function Result(_: PageParams) {
   ]
 
   return (
-    <div>
+    <section>
       <h1>Result</h1>
       <Ranking players={players}></Ranking>
-    </div>
+    </section>
   )
 }
