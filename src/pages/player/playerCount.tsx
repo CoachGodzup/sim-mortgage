@@ -1,7 +1,10 @@
 import { observer } from "mobx-react-lite";
-import { rootStore } from "../../store/rootStore";
-import useContext from "preact";
+import { PlayerStore } from "../../store/playerStore";
 
-export const playerCounter = observer(() => {
-  return <div>{rootStore.playerStore.playerListLength}</div>;
+export interface PlayerCountParams {
+  playerStore: PlayerStore;
+}
+
+export const PlayerCount = observer((params: PlayerCountParams) => {
+  return <div>{params.playerStore.playerListLength}</div>;
 });
