@@ -4,7 +4,7 @@ import Footer from './components/footer/footer';
 import About from './pages/about';
 import Home from './pages/home';
 import Match from './pages/match/match';
-import New from './pages/new';
+import New from './pages/new/new';
 import Result from './pages/result';
 
 export function App() {
