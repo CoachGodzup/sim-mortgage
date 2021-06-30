@@ -1,12 +1,12 @@
-import Player from "../models/player";
+import Player, { PlayerType } from "../models/player";
 import { generateRandomString } from "./utils.service";
 
 class PlayerService {
-  createPlayer = (nickname: string): Player => {
+  createPlayer = (nickname: string, type: PlayerType = 'Human'): Player => {
     return {
       id: generateRandomString(),
       name: nickname,
-      type: "Human",
+      type: type,
       budget: 50000,
       earning: 1500,
       expenses: 800,
